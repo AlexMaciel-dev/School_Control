@@ -123,7 +123,10 @@ function gerarGraficoGenero(
         data: [
           meninos,
           meninas
-        ]
+        ],
+
+        borderWidth: 0,
+        cutout: '70%',
       }]
     },
 
@@ -131,7 +134,22 @@ function gerarGraficoGenero(
 
       responsive: true,
 
-      maintainAspectRatio: false
+      maintainAspectRatio: false,
+
+      plugins: {
+
+        legend: {
+          position: 'bottom',
+
+          labels: {
+            color: 'white',
+            padding: 20,
+            font: {
+              size: 14
+            }
+          }
+        }
+      }
     }
   })
 }
