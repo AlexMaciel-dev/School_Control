@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0"
+  >
+
+  <title>Dashboard Escolar</title>
+
+  <link rel="stylesheet" href="./style.css">
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+
+<body>
+
+  <header>
+    <h1>Dashboard Escolar</h1>
+  </header>
+
+  <main>
+
+    <!-- DASHBOARD -->
+
+    <section class="cards-dashboard">
+
+      <div class="card-info">
+        <h2 id="totalAlunos">0</h2>
+        <p>Total de alunos</p>
+      </div>
+
+      <div class="card-info">
+        <h2 id="totalMeninos">0</h2>
+        <p>Meninos</p>
+      </div>
+
+      <div class="card-info">
+        <h2 id="totalMeninas">0</h2>
+        <p>Meninas</p>
+      </div>
+
+      <div class="card-info">
+        <h2 id="totalTurmas">0</h2>
+        <p>Turmas</p>
+      </div>
+
+    </section>
+
+    <!-- GRÁFICOS -->
+
+    <section class="graficos">
+
+      <div class="grafico-card">
+        <h3>Distribuição por Sexo</h3>
+        <canvas id="graficoGenero"></canvas>
+      </div>
+
+      <div class="grafico-card">
+        <h3>Faixa Etária</h3>
+        <canvas id="graficoIdade"></canvas>
+      </div>
+
+    </section>
+
+    <!-- FORMULÁRIO -->
+
+    <section class="formulario-section">
+
+      <h2>Cadastrar Aluno</h2>
+
+      <form id="formAluno">
+
+        <div class="grid-form">
+
+          <div class="input-group">
+            <label>Nome completo</label>
+            <input type="text" id="nome" required>
+          </div>
+
+          <div class="input-group">
+            <label>Idade</label>
+            <input type="number" id="idade" required>
+          </div>
+
+          <div class="input-group">
+            <label>Sexo</label>
+
+            <select id="sexo" required>
+              <option value="">Selecione</option>
+              <option value="Masculino">Masculino</option>
+              <option value="Feminino">Feminino</option>
+            </select>
+          </div>
+
+          <div class="input-group">
+            <label>Turma</label>
+            <input type="text" id="turma" required>
+          </div>
+
+          <div class="input-group">
+            <label>CPF</label>
+            <input type="text" id="cpf">
+          </div>
+
+          <div class="input-group">
+            <label>RG</label>
+            <input type="text" id="rg">
+          </div>
+
+          <div class="input-group">
+            <label>Data de nascimento</label>
+            <input type="date" id="nascimento">
+          </div>
+
+          <div class="input-group">
+            <label>Nome da mãe</label>
+            <input type="text" id="nomeMae">
+          </div>
+
+          <div class="input-group">
+            <label>Nome do pai</label>
+            <input type="text" id="nomePai">
+          </div>
+
+          <div class="input-group">
+            <label>Telefone</label>
+            <input type="tel" id="telefone">
+          </div>
+
+          <div class="input-group">
+            <label>Email</label>
+            <input type="email" id="email">
+          </div>
+
+          <div class="input-group">
+            <label>Endereço</label>
+            <input type="text" id="endereco">
+          </div>
+
+        </div>
+
+        <button type="submit">
+          Cadastrar Aluno
+        </button>
+
+      </form>
+
+    </section>
+
+    <!-- LISTA -->
+
+    <section>
+
+      <h2
+        style="
+          margin-bottom: 25px;
+          font-size: 2rem;
+        "
+      >
+        Alunos Cadastrados
+      </h2>
+
+      <div
+        id="listaAlunos"
+        class="lista-alunos"
+      ></div>
+
+    </section>
+
+  </main>
+
+  <!-- MODAL -->
+
+  <div
+    class="modal"
+    id="modal"
+  >
+
+    <div class="modal-content">
+
+      <span id="fecharModal">
+        ×
+      </span>
+
+      <div id="detalhesAluno"></div>
+
+    </div>
+
+  </div>
+
+  <script src="./script.js"></script>
+
+</body>
+</html>
