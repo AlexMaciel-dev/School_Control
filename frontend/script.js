@@ -166,10 +166,6 @@ function gerarGraficoIdade(alunos) {
       aluno.idade <= 17
   ).length
 
-  const adultos = alunos.filter(
-    aluno => aluno.idade >= 18
-  ).length
-
   const ctx =
     document.getElementById('graficoIdade')
 
@@ -185,8 +181,7 @@ function gerarGraficoIdade(alunos) {
 
       labels: [
         'Crianças',
-        'Adolescentes',
-        'Adultos'
+        'Adolescentes'
       ],
 
       datasets: [{
@@ -194,8 +189,7 @@ function gerarGraficoIdade(alunos) {
 
         data: [
           criancas,
-          adolescentes,
-          adultos
+          adolescentes
         ]
       }]
     },
